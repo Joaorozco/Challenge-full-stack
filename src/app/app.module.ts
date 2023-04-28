@@ -9,8 +9,7 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { HomeComponent } from './home/home.component';
 import { NavComponent } from './nav/nav.component';
 import { NgxChartsModule } from '@swimlane/ngx-charts';
-import { BaseType } from 'd3-selection';
-import { ScaleLinear, ScalePoint, ScaleTime } from 'd3-scale';
+
 
 
 

@@ -1,6 +1,6 @@
 {
   "hosting": {
-    "public": "dist\\challenge-full-stack",
+    "public": "dist/challenge-full-stack",
     "ignore": [
       "firebase.json",
       "**/.*",
