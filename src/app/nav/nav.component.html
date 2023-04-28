@@ -1,0 +1,13 @@
+<div class="sidenav">
+  <div class="sidenav-logo">
+    <p>Logo</p>
+  </div>
+  <ul class="sidenav-nav">
+    <li class="sidenav-nav-item" *ngFor="let data of navData" >
+      <a class="sidenav-nav-link" [routerLink]="[data.routeLink]">
+        <div class="circle-hover"><i class="sidenav-link-icon" [class]="data.icon"></i></div>
+        <span class="sidenav-link-text">{{data.label}}</span>
+      </a>
+    <li>
+  </ul>
+</div>

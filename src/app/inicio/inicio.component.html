@@ -1,0 +1,54 @@
+<section class="section-inicio">
+  <section class="section-title">
+    <h2 class="title">Bienvenidos a <span class="palabra-destacada">Unicomer</span></h2>
+  </section>
+  <section class="section-login">
+    <div class="container-login">
+      <h2 class="form_title">Logo</h2>
+      <form autocomplete="off" (ngSubmit)="onLogin()" class="form" name="loginForm" [formGroup]="loginForm">
+        <div class="form_container">
+          <div class="form_group">
+            <label id="dni" class="form_label">Tipo de documento</label>
+            <input class="form_input" for="dni" type="text" placeholder="DNI">
+
+          </div>
+          <div class="form_group">
+            <label id="docID" class="form_label">Número de documento</label>
+            <input formControlName="docID" id="docID" class="form_input" for="docID" type="text" placeholder="12365987">
+            <div *ngIf=" docID?.errors &&  docID?.touched" class="text-danger">
+              <p *ngIf=" docID?.hasError('required')" >
+                El número de documento es requerido.
+              </p>
+            </div>
+          </div>
+          <div class="form_group">
+            <label id="password" class="form_label">Clave</label>
+            <input id="password" formControlName="password" class="form_input" for="password" type="password" placeholder="***********">
+            <div *ngIf="password?.errors && password?.touched" class="text-danger">
+              <p *ngIf=" password?.hasError('required')">
+                El número de documento es requerido.
+              </p>
+              <p *ngIf=" password?.hasError('minlength')">
+                La clave debe tener al menos 8 dígitos.
+              </p>
+              <p *ngIf=" password?.hasError('maxlength')">
+                La clave debe tener menos 16 dígitos.
+              </p>
+            </div>
+
+
+          </div>
+        </div>
+
+        <button type="submit" class="form_submit">Ingresar</button>
+      </form>
+      <div class="teclado_virtual">
+        <img alt="Virtualkey" class="vector_teclado_virtual" src="../../assets/Vector.png" >
+        <p class="texto_teclado_virtual">Teclado virtual</p>
+      </div>
+      <div class="register">
+        <a class="link_register" href="#">¿No tienes cuenta? Regístrate aquí</a>
+      </div>
+    </div>
+  </section>
+</section>

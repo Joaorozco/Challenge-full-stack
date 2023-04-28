@@ -1,0 +1,182 @@
+<div class="container_home">
+  <app-nav></app-nav>
+  <form class="form_home">
+    <div class="container_input_home">
+      <input class="input_search" type="search" placeholder="Busca aquí">
+    </div>
+  </form>
+  <div class="container_setUp">
+    <div class="container_configuration">
+      <i class="fa-solid fa-gear"></i>
+    </div>
+    <div class="container_notification">
+      <i class="fa-regular fa-bell"></i>
+    </div>
+    <div class="container_perfil">
+      <img alt="imagen de perfil" src="../../assets/Placeholder.png">
+    </div>
+    <div class="container_perfil">
+      <p class="name_user">Nombre User</p>
+    </div>
+  </div>
+  <div class="container_card_home">
+    <h2>Inicio</h2>
+    <div class="container_card">
+      <div class="card card_saldo">
+        <div class="mi_saldo">
+          <div class="saldo">
+            <h4>Mi saldos</h4>
+            <h2>$45.000</h2>
+          </div>
+          <div class="vectores">
+            <img src="../../assets/01.png" alt="vector">
+            <img src="../../assets//02.png" alt="vector">
+          </div>
+        </div>
+        <div class="alias">
+          <i class="fa-solid fa-code-merge"></i>
+          <p>CBU/Alias</p>
+        </div>
+        <div class="num_tarjeta">
+          <i class="fa-solid fa-microchip"></i>
+          <p>**** **** **** 1234</p>
+        </div>
+        <div class="titular_vencimiento">
+          <div class="titular">
+            <p>Titular de la tarjeta</p>
+            <h4>Luz Deny</h4>
+          </div>
+          <div class="vencimiento">
+            <p>Valida hasta</p>
+            <h4>03/21</h4>
+          </div>
+          <div class="rectangulos">
+            <img src="../../assets/Rectangle.png" alt="rectangle">
+            <img src="../../assets/Rectangle (1).png" alt="rectangle">
+          </div>
+        </div>
+      </div>
+      <div class="card card_ingresos">
+        <div class="ingresos">
+          <div class="circle">
+            <i class="fa-solid fa-arrow-down"></i>
+          </div>
+          <div>
+            <p>Ingresos</p>
+            <h4>$545,5</h4>
+          </div>
+        </div>
+        <div class="porcentaje">
+          <i class="fa-solid fa-caret-up"></i>
+          <p>0,5 + que el mes pasado</p>
+        </div>
+        <div class="linea">
+          <img src="../../assets/line.png" alt="linea">
+        </div>
+      </div>
+      <div class="card card_egresos">
+        <div class="egresos">
+          <div class="circle">
+            <i class="fa-solid fa-arrow-up"></i>
+          </div>
+          <div>
+            <p>Egresos</p>
+            <h4>$545,5</h4>
+          </div>
+          <div class="porcentaje_egresos">
+            <i class="fa-solid fa-caret-down"></i>
+            <p>0,5 - que el mes pasado</p>
+          </div>
+        </div>
+        <div class="linea">
+          <img src="../../assets/Chart Red.png" alt="linea">
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="container_balace_trasacciones">
+    <h2>Balance</h2>
+    <div class="box_container">
+      <div class="container_balance">
+        <ngx-charts-bar-vertical class="charts" [view]="view" [results]="single" [gradient]="gradient"
+          [xAxis]="showXAxis" [yAxis]="showYAxis" [legend]="showLegend" [showXAxisLabel]="showXAxisLabel"
+          [showYAxisLabel]="showYAxisLabel" [xAxisLabel]="xAxisLabel" [yAxisLabel]="yAxisLabel"
+          (select)="onSelect($event)">
+        </ngx-charts-bar-vertical>
+      </div>
+
+      <div class="container_transacciones">
+        <table class="table">
+          <tbody>
+            <tr>
+              <th scope="row"><img src="../../assets/arrow.png" alt="transferencia"></th>
+              <td>Samantha W.</td>
+              <td>50,00</td>
+              <td>25 Ene, 2023</td>
+              <td>Completado</td>
+              <td>...</td>
+            </tr>
+            <tr>
+              <th scope="row"><img src="../../assets/arrow.png" alt="transferencia"></th>
+              <td>Samantha W.</td>
+              <td>50,00</td>
+              <td>25 Ene, 2023</td>
+              <td>Completado</td>
+              <td>...</td>
+            </tr>
+            <tr>
+              <th scope="row"><img src="../../assets/arrow.png" alt="transferencia"></th>
+              <td>Samantha W.</td>
+              <td>50,00</td>
+              <td>25 Ene, 2023</td>
+              <td>Completado</td>
+              <td>...</td>
+            </tr>
+            <tr>
+              <th scope="row"><img src="../../assets/arrow.png" alt="transferencia"></th>
+              <td>Samantha W.</td>
+              <td>50,00</td>
+              <td>25 Ene, 2023</td>
+              <td>Completado</td>
+              <td>...</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+  <div class="container_prestamos">
+    <h2>Últimos prestamos</h2>
+    <table class="default">
+      <tr>
+
+        <th>Monto total</th>
+        <th>Cuotas</th>
+        <th>Fecha de emision</th>
+        <th>Mensual</th>
+        <th>Tasa de interes</th>
+
+      </tr>
+      <tr>
+        <td>5666,55</td>
+        <td>cuanta 6 - 24</td>
+        <td>25/7/22</td>
+        <td>900</td>
+        <td>5%</td>
+        <td><button>Pagar</button></td>
+        <td>...</td>
+      </tr>
+
+      <tr>
+        <td>5666,55</td>
+        <td>cuanta 6 - 24</td>
+        <td>25/7/22</td>
+        <td>900</td>
+        <td>5%</td>
+        <td><button>Pagar</button></td>
+        <td>...</td>
+      </tr>
+
+    </table>
+  </div>
+</div>
