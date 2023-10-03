@@ -1,182 +1,175 @@
-<div class="container_home">
-  <app-nav></app-nav>
-  <form class="form_home">
-    <div class="container_input_home">
-      <input class="input_search" type="search" placeholder="Busca aquí">
-    </div>
-  </form>
-  <div class="container_setUp">
-    <div class="container_configuration">
-      <i class="fa-solid fa-gear"></i>
-    </div>
-    <div class="container_notification">
-      <i class="fa-regular fa-bell"></i>
-    </div>
-    <div class="container_perfil">
-      <img alt="imagen de perfil" src="../../assets/Placeholder.png">
-    </div>
-    <div class="container_perfil">
-      <p class="name_user">Nombre User</p>
-    </div>
-  </div>
-  <div class="container_card_home">
-    <h2>Inicio</h2>
-    <div class="container_card">
-      <div class="card card_saldo">
-        <div class="mi_saldo">
-          <div class="saldo">
-            <h4>Mi saldos</h4>
-            <h2>$45.000</h2>
-          </div>
-          <div class="vectores">
-            <img src="../../assets/01.png" alt="vector">
-            <img src="../../assets//02.png" alt="vector">
-          </div>
+<div class="container-fluid d-flex d-sm-flex d-xl-flex d-xs-flex">
+  <app-nav class="nav"></app-nav>
+  <div class="container-fluid">
+    <div class="d-flex d-sm-flex d-md-flex d-xs-flex">
+      <form class="form_home">
+        <div class="container_input_home">
+          <input class="input_search" type="search" placeholder="Busca aquí">
         </div>
-        <div class="alias">
-          <i class="fa-solid fa-code-merge"></i>
-          <p>CBU/Alias</p>
+      </form>
+      <div class="container d-flex justify-content-end align-items-center">
+        <div class="ms-2 d-flex justify-content-center align-items-center container_configuration">
+          <i class="fa-solid fa-gear fs-3 text-secondary-emphasis"></i>
         </div>
-        <div class="num_tarjeta">
-          <i class="fa-solid fa-microchip"></i>
-          <p>**** **** **** 1234</p>
+        <div class="ms-2 d-flex justify-content-center align-items-center container_notification">
+          <i class="bell fa-regular fa-bell fs-3 text-secondary-emphasis"></i>
         </div>
-        <div class="titular_vencimiento">
-          <div class="titular">
-            <p>Titular de la tarjeta</p>
-            <h4>Luz Deny</h4>
-          </div>
-          <div class="vencimiento">
-            <p>Valida hasta</p>
-            <h4>03/21</h4>
-          </div>
-          <div class="rectangulos">
-            <img src="../../assets/Rectangle.png" alt="rectangle">
-            <img src="../../assets/Rectangle (1).png" alt="rectangle">
-          </div>
+        <div class="ms-2 d-flex justify-content-center align-items-center container_perfil">
+          <img alt="imagen de perfil" src="../../assets/Placeholder.png">
         </div>
-      </div>
-      <div class="card card_ingresos">
-        <div class="ingresos">
-          <div class="circle">
-            <i class="fa-solid fa-arrow-down"></i>
-          </div>
-          <div>
-            <p>Ingresos</p>
-            <h4>$545,5</h4>
-          </div>
-        </div>
-        <div class="porcentaje">
-          <i class="fa-solid fa-caret-up"></i>
-          <p>0,5 + que el mes pasado</p>
-        </div>
-        <div class="linea">
-          <img src="../../assets/line.png" alt="linea">
-        </div>
-      </div>
-      <div class="card card_egresos">
-        <div class="egresos">
-          <div class="circle">
-            <i class="fa-solid fa-arrow-up"></i>
-          </div>
-          <div>
-            <p>Egresos</p>
-            <h4>$545,5</h4>
-          </div>
-          <div class="porcentaje_egresos">
-            <i class="fa-solid fa-caret-down"></i>
-            <p>0,5 - que el mes pasado</p>
-          </div>
-        </div>
-        <div class="linea">
-          <img src="../../assets/Chart Red.png" alt="linea">
+        <div class="ms-2 d-flex justify-content-center align-items-center">
+          <p class="fw-semibold name_user">Alexis Joaquin Orozco</p>
         </div>
       </div>
     </div>
-  </div>
-  <div class="container_balace_trasacciones">
-    <h2>Balance</h2>
-    <div class="box_container">
-      <div class="container_balance">
-        <ngx-charts-bar-vertical class="charts" [view]="view" [results]="single" [gradient]="gradient"
-          [xAxis]="showXAxis" [yAxis]="showYAxis" [legend]="showLegend" [showXAxisLabel]="showXAxisLabel"
-          [showYAxisLabel]="showYAxisLabel" [xAxisLabel]="xAxisLabel" [yAxisLabel]="yAxisLabel"
-          (select)="onSelect($event)">
-        </ngx-charts-bar-vertical>
+    <div>
+      <div class="d-flex d-sm-flex d-md-flex justify-content-between align-items-center">
+        <h2 class="title-inicio ps-5 ms-4">Inicio</h2>
+        <div class="d-flex align-items-center p-4">
+          <div class="d-flex flex-column align-items-center justify-content-center me-3 c-p">
+            <i class="fa-solid fa-dollar-sign fs-3 text-secondary" data-bs-toggle="tooltip"
+              data-bs-original-title="Tooltip para el primer icono"></i>
+            <span class="fs-6 fw-light">Ingresar dinero</span>
+          </div>
+          <div class="d-flex flex-column align-items-center justify-content-center me-3 c-p">
+            <i class="fa-solid fa-money-bill fs-3 text-secondary" data-bs-toggle="tooltip"
+              data-bs-original-title="Tooltip para el primer icono"></i>
+            <span class="fs-6 fw-light">Extraer dinero</span>
+          </div>
+          <div class="d-flex flex-column align-items-center justify-content-center me-3 c-p">
+            <i class="fa-solid fa-money-bill-transfer fs-3 text-secondary" data-bs-toggle="tooltip"
+              data-bs-original-title="Tooltip para el primer icono"></i>
+            <span class="fs-6 fw-light">Tranferencias</span>
+          </div>
+        </div>
       </div>
 
-      <div class="container_transacciones">
-        <table class="table">
-          <tbody>
-            <tr>
-              <th scope="row"><img src="../../assets/arrow.png" alt="transferencia"></th>
-              <td>Samantha W.</td>
-              <td>50,00</td>
-              <td>25 Ene, 2023</td>
-              <td>Completado</td>
-              <td>...</td>
-            </tr>
-            <tr>
-              <th scope="row"><img src="../../assets/arrow.png" alt="transferencia"></th>
-              <td>Samantha W.</td>
-              <td>50,00</td>
-              <td>25 Ene, 2023</td>
-              <td>Completado</td>
-              <td>...</td>
-            </tr>
-            <tr>
-              <th scope="row"><img src="../../assets/arrow.png" alt="transferencia"></th>
-              <td>Samantha W.</td>
-              <td>50,00</td>
-              <td>25 Ene, 2023</td>
-              <td>Completado</td>
-              <td>...</td>
-            </tr>
-            <tr>
-              <th scope="row"><img src="../../assets/arrow.png" alt="transferencia"></th>
-              <td>Samantha W.</td>
-              <td>50,00</td>
-              <td>25 Ene, 2023</td>
-              <td>Completado</td>
-              <td>...</td>
-            </tr>
-          </tbody>
-        </table>
+      <div class="container container_card_home" *ngFor="let data of allCards">
+        <div class="d-xs-block d-sm-block d-xl-flex d-flex">
+          <div class="card card_saldo z-1">
+            <div class="mi_saldo">
+              <div class="saldo">
+                <h4 class="fs-4 text-white fw-normal">Mi saldo</h4>
+                <h2 class="text-white fs-2">${{data.saldo}}</h2>
+              </div>
+
+            </div>
+            <div class="d-flex justify-content-between pt-5">
+              <i class="fa-solid fa-microchip text-warning fs-4"></i>
+              <div class="d-flex align-items-end">
+                <span class="text-white text-center fs-5">{{data.numeroDeTarjeta}}</span>
+              </div>
+            </div>
+            <div class="titular_vencimiento">
+              <div class="titular">
+                <p class="fs-6 fw-light text-white-50">Titular de la tarjeta</p>
+                <h4 class="fs-5 text-white">{{data.titularTarjeta}}</h4>
+              </div>
+              <div class="vencimiento">
+                <p class="fs-6 fw-light text-white-50">Valida hasta</p>
+                <h4 class="fs-5 text-white ms-3">{{data.fechaVencimiento}}</h4>
+              </div>
+            </div>
+          </div>
+          <div class="card card_ingresos">
+            <div class="d-flex justify-content-between">
+              <div class="circle d-flex justify-content-center align-items-center">
+                <i class="fa-solid fa-arrow-up text-success fs-2"></i>
+              </div>
+              <div class="d-flex flex-column align-items-center justify-content-center me-3">
+                <p>Ingresos</p>
+                <h4 class="fs-3">$545,5</h4>
+              </div>
+              <div class="d-flex flex-column align-items-center justify-content-center me-3">
+                <i class="fa-solid fa-caret-up text-success fs-2"></i>
+                <p>0,5</p>
+              </div>
+            </div>
+
+          </div>
+          <div class="card card_egresos">
+            <div class=" d-flex justify-content-between">
+              <div class="circle d-flex justify-content-center align-items-center">
+                <i class="fa-solid fa-arrow-down text-danger fs-2"></i>
+              </div>
+              <div class="d-flex flex-column align-items-center justify-content-center me-3">
+                <p>Egresos</p>
+                <h4 class="fs-3">$800,06</h4>
+              </div>
+              <div class="d-flex flex-column align-items-center justify-content-center me-3">
+                <i class="fa-solid fa-caret-down text-danger fs-2"></i>
+                <p>0,5</p>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
-  </div>
-  <div class="container_prestamos">
-    <h2>Últimos prestamos</h2>
-    <table class="default">
-      <tr>
+    <div class="d-flex justify-content-center mb-5">
+      <div class="d-flex d-sm-block d-xl-flex">
+        <div class="container_fluid border d-flex flex-column align-items-center justify-content-between bg-white p-5 rounded mb-5">
+          <h2 class="p-3">Balance</h2>
+          <div class="container-fluid d-flex justify-content-center m-xs-0 m-sm-0 m-lg-0">
+            <ngx-charts-bar-vertical class="charts" [view]="view" [results]="single" [gradient]="gradient"
+              [xAxis]="showXAxis" [yAxis]="showYAxis" [legend]="showLegend" [showXAxisLabel]="showXAxisLabel"
+              [showYAxisLabel]="showYAxisLabel" [xAxisLabel]="xAxisLabel" [yAxisLabel]="yAxisLabel"
+              (select)="onSelect($event)">
+            </ngx-charts-bar-vertical>
+          </div>
+        </div>
+        <div class="container_fluid border bg-white ms-5 p-5 rounded">
+          <div class="container_transacciones d-flex flex-column align-items-center justify-content-between">
+            <h2 class="p-3">Últimas transacciones</h2>
+            <table class="table table-sm rounded">
+              <tbody>
+                <tr *ngFor="let data of allTransaction">
+                  <th scope="row"><img src="../../assets/arrow.png" alt="transferencia"></th>
+                  <td>{{data.nombre}}</td>
+                  <td>{{data.monto}}</td>
+                  <td>{{data.fecha}}3</td>
+                  <td class="text-danger">{{data.estado}}</td>
+                  <td>...</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
 
-        <th>Monto total</th>
-        <th>Cuotas</th>
-        <th>Fecha de emision</th>
-        <th>Mensual</th>
-        <th>Tasa de interes</th>
+    <div class="container_fluid border">
+      <table class="table caption-top">
+        <caption class="fs-2">Listado de prestamos</caption>
+        <thead>
+          <tr>
+            <th scope="col">Monto total</th>
+            <th scope="col">Cuotas</th>
+            <th scope="col">Fecha de emision</th>
+            <th scope="col">Meses</th>
+            <th scope="col">Tasa de interes</th>
+            <th scope="col"></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>$800.000</td>
+            <td>50.000</td>
+            <td>12/08/20201</td>
+            <td>24</td>
+            <td>10,5%</td>
+            <td><button type="button" class="btn btn-success">Completado</button></td>
+          </tr>
+          <tr>
+            <td>$1.800.000</td>
+            <td>80.000</td>
+            <td>18/02/2023</td>
+            <td>12</td>
+            <td>0,5%</td>
+            <td><button type="button" class="btn btn-danger">Cancelado</button></td>
+          </tr>
 
-      </tr>
-      <tr>
-        <td>5666,55</td>
-        <td>cuanta 6 - 24</td>
-        <td>25/7/22</td>
-        <td>900</td>
-        <td>5%</td>
-        <td><button>Pagar</button></td>
-        <td>...</td>
-      </tr>
-
-      <tr>
-        <td>5666,55</td>
-        <td>cuanta 6 - 24</td>
-        <td>25/7/22</td>
-        <td>900</td>
-        <td>5%</td>
-        <td><button>Pagar</button></td>
-        <td>...</td>
-      </tr>
-
-    </table>
+        </tbody>
+      </table>
+    </div>
   </div>
 </div>

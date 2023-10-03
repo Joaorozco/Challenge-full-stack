@@ -1,276 +1,639 @@
-.container_home{
-  display: flex;
-  background: #F5F5F5;
-}
-.form_home{
-  height: 60px;
-  margin-top: 29px;
-  margin-left: 50px;
-}
-.container_input_home{
-  display: flex;
-  background: #ffff;
-  padding: 9px 22px 9px 26px;
-  border-radius: 30px;
-  border: 2px solid #cad3dc;
-}
-.input_search{
-  width: 600px;
-  border: none;
-  padding-left: 24px;
-  background: transparent;
-  background-image: url(../../assets/magnifying-glass-solid.svg);
-  background-size: 16px;
-  background-repeat: no-repeat;
-}
-.input_search:focus{
-  border: none;
-}
-.container_setUp{
-  height: 60px;
-  display: flex;
-  margin-top: 23px;
-  margin-left: 90px;
-  align-items: center;
-}
-.container_configuration{
-  width: 60px;
-  height: 60px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border: 1px solid #8E8EA1;
-  border-radius: 50%;
-  margin-left: 14px;
-}
-.container_notification{
-  width: 60px;
-  height: 60px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border: 1px solid #8E8EA1;
-  border-radius: 50%;
-  margin-left: 14px;
-}
-.notification{
-  width: 10px;
-  height: 10px;
-  position: absolute;
-  right: 140px;
-  top: 29px;
-  border-radius: 50%;
-  background: #33418A;
-}
-.container_perfil{
-  width: 60px;
-  height: 60px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border-radius: 50%;
-  margin-left: 14px;
-}
-.name_user{
-  font-size: 15px;
-}
-.container_card_home{
-  width: auto;
-  height: auto;
-  position: absolute;
-  margin-left: 280px;
-  margin-top: 100px;
-}
-.container_card{
-  display: flex;
-}
-.card{
-  width: 340px;
-  height: 240px;
-  background: #cad3dc;
-  margin-left: 15px;
-  border-radius: 27.7576px;
-}
-.card_saldo{
-  background-color: #ff2c56da;
+@media only screen and (min-width: 1200px) {
+  /* Estilos para laptops y monitores de escritorio */
+
+  .container_home {
+    width: 100vw;
+    background-color: #f8f6f6;
+  }
+
+  .form_home {
+    height: 3.75em;
+    margin-top: 1.8125em;
+    margin-left: 3.125em;
+  }
+
+  .container_input_home {
+    display: flex;
+    background: #ffff;
+    padding: 9px 22px 9px 26px;
+    border-radius: 30px;
+    border: 2px solid #cad3dc;
+  }
+
+  .input_search {
+    width: 50vw;
+    border: none;
+    padding-left: 24px;
+    background: transparent;
+    background-size: 16px;
+  }
+
+  .input_search:focus {
+    border: none;
+  }
+
+  .container_configuration,
+  .container_notification,
+  .container_perfil {
+    width: 3.75em;
+    height: 3.75em;
+    border: 1px solid #dddddd;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: transform 0.3s;
+  }
+
+  .container_configuration:hover {
+    transform: rotate(45deg);
+  }
+
+  .bell:hover {
+    animation: vibracion 0.3s ease;
+  }
+
+  @keyframes vibracion {
+    0% {
+      transform: translateX(0);
+    }
+
+    20% {
+      transform: translateX(-2px) rotate(-1deg);
+    }
+
+    40% {
+      transform: translateX(2px) rotate(1deg);
+    }
+
+    60% {
+      transform: translateX(-2px) rotate(-1deg);
+    }
+
+    80% {
+      transform: translateX(2px) rotate(1deg);
+    }
+
+    100% {
+      transform: translateX(0);
+    }
+  }
+
+  .notification {
+    width: 0.625em;
+    height: 0.625em;
+    position: absolute;
+    right: 140px;
+    top: 29px;
+    border-radius: 50%;
+    background: #33418A;
+  }
+
+  .c-p {
+    cursor: pointer;
+  }
+
+  /* =======CARDS===== */
+  .container_card_home {
+    width: 100%;
+    padding: 3vw;
+    height: auto;
+    display: flex;
+  }
+
+  .card {
+    width: 25vw;
+    height: 35vh;
+    padding: 40px;
+    margin-left: 15px;
+    border-radius: 20px;
+    /* display: inline; */
+    /* background: url(../../assets/55708631.png); */
+  }
+
+  .card_saldo {
+    background: url(../../assets/fondo.avif);
+  }
+
+  .mi_saldo {
+    font-size: 13.0236em;
+    line-height: 16px;
+    margin-left: 20px;
+    display: flex;
+  }
+
+  .titular_vencimiento {
+    display: flex;
+  }
+
+  .card_ingresos {
+    display: flex;
+    background: url(../../assets/55708631.png);
+    background-position: 20%;
+  }
+
+  .card_egresos {
+    background: url(../../assets/55708631.png);
+    background-position: 20%;
+  }
+
+  .circle {
+    width: 60px;
+    height: 60px;
+    background-color: #efefef;
+    border-radius: 70%;
+    display: flex;
+    align-items: center;
+  }
+
+  /* =======ENDSCARDS======= */
+  /* ========================== */
+  /* ========================== */
+  /* ========================== */
+  /* ========================== */
+  /* ========================== */
+  /* =======BALANCE Y TRANSACTION======= */
+  .container_balance {
+    width: auto;
+    border-radius: 30px;
+  }
+
+  .container_transacciones {
+    width: 35em;
+    height: 40vh;
+    border-radius: 30px;
+  }
+
+  .ultimas-transacciones {
+    border-radius: 30px;
+  }
+
+  th,
+  td {
+    font-size: 18px;
+    line-height: 30px;
+  }
+
+  .container_prestamos {
+    width: 100%;
+    height: auto;
+    padding: 1vw;
+    border-radius: 30px;
+    display: flex;
+  }
+
+  .container_prestamos table {
+    border-radius: 5px;
+  }
 }
 
-.mi_saldo{
-  font-size: 13.0236px;
-  line-height: 16px;
-  margin-left: 20px;
-  display: flex;
-}
-.vectores{
-  margin: 25px 0px 0px 150px;
+/* Tablets en modo landscape */
+@media only screen and (min-width: 1024px) and (max-width: 1199px) {
+
+  /* Estilos para tablets en modo landscape */
+  .container_home {
+    width: 100%;
+  }
+
+  .container_input_home {
+    display: flex;
+    background: #ffff;
+    padding: 9px 15px 9px 26px;
+    border-radius: 30px;
+    border: 2px solid #cad3dc;
+  }
+
+  .input_search {
+    width: 30vw;
+  }
+
+  /* =======CARDS===== */
+  .container_card_home {
+    width: 100%;
+    padding: 3vw;
+    height: auto;
+    display: flex;
+  }
+
+  .card {
+    width: 90vw;
+    height: 35vh;
+    padding: 40px;
+    margin-left: 0px;
+    margin-bottom: 15px;
+    border-radius: 20px;
+  }
+
+  .card_saldo {
+    background: url(../../assets/fondo.avif);
+  }
+
+  .card_ingresos {
+    display: flex;
+    background: url(../../assets/55708631.png);
+    background-position: 20%;
+  }
+
+  .card_egresos {
+    background: url(../../assets/55708631.png);
+    background-position: 20%;
+  }
+
+  .mi_saldo {
+    font-size: 13.0236em;
+    line-height: 16px;
+    margin-left: 20px;
+    display: flex;
+  }
+
+  .titular_vencimiento {
+    display: flex;
+  }
+
+  /* =======ENDSCARDS======= */
+  /* ========================== */
+  /* ========================== */
+  /* ========================== */
+  /* ========================== */
+  /* ========================== */
+  /* =======BALANCE Y TRANSACTION======= */
+  .container_balance {
+    width: 90vw;
+    border-radius: 30px;
+    margin-bottom: 10px;
+  }
+
+  .container_transacciones {
+    width: 90vw;
+    height: 40vh;
+    border-radius: 30px;
+  }
+
+  .container_prestamos {
+    width: auto;
+    height: auto;
+    padding: 1vw;
+    border-radius: 30px;
+    display: flex;
+  }
+
+  .container_prestamos table {
+    border-radius: 5px;
+  }
 }
 
-.mi_saldo h4{
-  font-size: 13.0236px;
-  line-height: 16px;
-}
-.mi_saldo h2{
-  font-weight: 600;
-  font-size: 20px;
-  line-height: 24px;
-}
-.alias{
-  display: flex;
-  align-items: center;
-  margin-left: 20px;
-}
-.alias p{
-  font-weight: 400;
-  font-size: 10px;
-  line-height: 12px;
-  margin-left: 20px;
-}
-.num_tarjeta{
-  display: flex;
-  align-items: center;
-  margin-left: 20px;
-}
-.num_tarjeta p{
-  margin-left: 100px;
-}
-.titular_vencimiento{
-  display: flex;
-  margin-left: 15px;
-}
-.titular_vencimiento p {
-  font-weight: 400;
-  font-size: 10px;
-  line-height: 12px;
-}
-.vencimiento{
-  margin-left: 30px;
-}
-.titular_vencimiento h4{
-  font-weight: 700;
-  font-size: 14px;
-  line-height: 17px;
-}
-.rectangulos{
-  margin-left: 30px;
-}
-.rectangulos img{
-  width: 50px;
-  height: 67px;
-}
-.card_ingresos{
-  display: flex;
-}
-.ingresos{
-  display: flex;
-}
-.circle{
-  width: 60px;
-  height: 60px;
-  background-color: #33418A;
-  border-radius: 50%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin: 20px 20px 0 25px;
-}
-.ingresos p{
-  color:#8E8EA1;
-  font-size: 12px;
-  line-height: 15px;
-  margin: 35px 0 0 10px;
-}
-.ingresos h4{
-  font-weight: 600;
-  font-size: 20px;
-  line-height: 24px;
-  color: #22242C;
-  margin: 0;
-}
-.porcentaje {
-  color: #00A389;
-  font-size: 12.5203px;
-  line-height: 15px;
-  text-align: right;
-  margin: 20px 0 0 60px;
-}
-.linea{
-  position: absolute;
-  bottom: 0;
-}
-.egresos{
-  display: flex;
-}
-.egresos p{
-  color:#8E8EA1;
-  font-size: 12px;
-  line-height: 15px;
-  margin: 35px 0 0 10px;
-}
-.egresos h4{
-  font-weight: 600;
-  font-size: 20px;
-  line-height: 24px;
-  color: #22242C;
-  margin: 0;
-}
-.porcentaje_egresos{
-  color: #FF4A55;
-  font-size: 12.5203px;
-  line-height: 15px;
-  text-align: right;
-  margin: 0px 0 0 50px;
-  position: relative;
-}
-.container_balace_trasacciones{
-  width: auto;
-  height: auto;
+@media only screen and (min-width: 768px) and (max-width: 1023px) {
 
-  position: absolute;
-  margin-left: 280px;
-  margin-top: 450px;
-}
-.box_container{
-  display: flex;
-}
-.container_balance{
-  width: 50%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  background: #ffff;
-  border-radius: 30px;
-}
-.container_transacciones{
-  width: 50%;
-  display: flex;
-  margin-left: 70px;
-  flex-direction: column;
-  justify-content: center;
-  background: #ffff;
-  border-radius: 30px;
-}
-.table{
-  text-align: left;
-  border-collapse: collapse;
-  width: 100%;
-}
-th, td{
-  font-size: 5px;
-  padding: 20px;
-  font-size: 18px;
-  line-height: 15px;
-}
-tr:nth-child(even){
-  background-color: #ddd;
+  /* Estilos para tablets en modo portrait */
+  .container_home {
+    width: 100%;
+  }
+
+  .container_input_home {
+    display: flex;
+    background: #ffff;
+    padding: 9px 15px 9px 26px;
+    border-radius: 30px;
+    border: 2px solid #cad3dc;
+  }
+
+  .input_search {
+    width: 30vw;
+  }
+
+  /* =======CARDS===== */
+  .container_card_home {
+    width: 100%;
+    padding: 3vw;
+    height: auto;
+    display: flex;
+  }
+
+  .card {
+    width: 90vw;
+    height: 35vh;
+    padding: 40px;
+    margin-bottom: 15px;
+    border-radius: 20px;
+
+  }
+
+  .card_saldo {
+    background: url(../../assets/fondo.avif);
+  }
+
+  .mi_saldo {
+    font-size: 13.0236em;
+    line-height: 16px;
+    margin-left: 20px;
+    display: flex;
+  }
+
+  .titular_vencimiento {
+    display: flex;
+  }
+
+  .card_ingresos {
+    display: flex;
+    background: url(../../assets/55708631.png);
+    background-position: 20%;
+  }
+
+  .card_egresos {
+    background: url(../../assets/55708631.png);
+    background-position: 20%;
+  }
+
+  .circle {
+    width: 60px;
+    height: 60px;
+    background-color: #efefef;
+    border-radius: 70%;
+    display: flex;
+    align-items: center;
+  }
+
+  /* =======ENDSCARDS======= */
+  /* ========================== */
+  /* ========================== */
+  /* ========================== */
+  /* ========================== */
+  /* ========================== */
+  /* =======BALANCE Y TRANSACTION======= */
+  .container_balance {
+    width: 90vw;
+    border-radius: 30px;
+    margin-bottom: 10px;
+  }
+
+  .container_transacciones {
+    width: 90vw;
+    height: 40vh;
+    border-radius: 30px;
+  }
+
+  .container_prestamos {
+    width: auto;
+    height: auto;
+    padding: 1vw;
+    border-radius: 30px;
+    display: flex;
+  }
+
+  .container_prestamos table {
+    border-radius: 5px;
+  }
 }
 
-.container_prestamos{
-  width: auto;
-  height: auto;
-  background: #FFFFFF;
-  border-radius: 30px;
-  position: absolute;
-  margin-left: 280px;
-  margin-top: 900px;
+
+
+/* Smartphones en modo landscape (horizontal) */
+@media only screen and (min-width: 481px) and (max-width: 767px) {
+
+  /* Estilos para smartphones en modo landscape */
+  .container_home {
+    width: 90vw;
+  }
+
+  .form_home {
+    height: 3.75em;
+    margin-top: 1.8125em;
+    margin-left: 3.125em;
+  }
+
+  .container_input_home {
+    display: flex;
+    background: #ffff;
+    padding: 9px 22px 9px 26px;
+    border-radius: 30px;
+    border: 2px solid #cad3dc;
+  }
+
+  .input_search {
+    width: 50vw;
+    border: none;
+    padding-left: 24px;
+    background: transparent;
+    background-size: 16px;
+  }
+
+  .input_search:focus {
+    border: none;
+  }
+
+  .container_configuration,
+  .container_notification,
+  .container_perfil {
+    width: 3.75em;
+    height: 3.75em;
+    border: 1px solid #dddddd;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: transform 0.3s;
+  }
+
+  /* =======CARDS===== */
+  .container_card_home {
+    width: 100%;
+    padding: 3vw;
+    height: auto;
+  }
+
+  .card {
+    width: 90vw;
+    height: 35vh;
+    padding: 40px;
+    margin-left: 15px;
+    border-radius: 20px;
+  }
+
+  .card_saldo {
+    background: url(../../assets/fondo.avif);
+  }
+
+  .mi_saldo {
+    font-size: 13.0236em;
+    line-height: 16px;
+    margin-left: 20px;
+    display: flex;
+  }
+
+  .titular_vencimiento {
+    display: flex;
+  }
+
+  .card_ingresos {
+    display: flex;
+    background: url(../../assets/55708631.png);
+    background-position: 20%;
+  }
+
+  .card_egresos {
+    background: url(../../assets/55708631.png);
+    background-position: 20%;
+  }
+
+  .circle {
+    width: 60px;
+    height: 60px;
+    background-color: #efefef;
+    border-radius: 70%;
+    display: flex;
+    align-items: center;
+  }
+
+  /* =======ENDSCARDS======= */
+  /* ========================== */
+  /* ========================== */
+  /* ========================== */
+  /* ========================== */
+  /* ========================== */
+  /* =======BALANCE Y TRANSACTION======= */
+  .container_balance {
+    width: 90vw;
+    border-radius: 30px;
+    margin-bottom: 10px;
+  }
+
+  .container_transacciones {
+    width: 90vw;
+    height: 40vh;
+    border-radius: 30px;
+  }
+
+  .container_prestamos {
+    width: auto;
+    height: auto;
+    padding: 1vw;
+    border-radius: 30px;
+    display: flex;
+  }
+
+  .container_prestamos table {
+    border-radius: 5px;
+  }
 }
 
+/* ==============PHONES VERTICAL============= */
+@media only screen and (max-width: 480px) {
+  .container_home {
+    width: 100vw;
+    background-color: #f8f6f6;
+  }
+
+  .form_home {
+    height: 3.75em;
+    margin-top: 1.8125em;
+    margin-left: 3.125em;
+  }
+
+  .container_input_home {
+    display: flex;
+    background: #ffff;
+    padding: 9px 22px 9px 26px;
+    border-radius: 30px;
+    border: 2px solid #cad3dc;
+  }
+
+  .input_search {
+    width: 50vw;
+    border: none;
+    padding-left: 24px;
+    background: transparent;
+    background-size: 16px;
+  }
+
+  .input_search:focus {
+    border: none;
+  }
+
+  .container_configuration,
+  .container_notification,
+  .container_perfil {
+    width: 3.75em;
+    height: 3.75em;
+    border: 1px solid #dddddd;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: transform 0.3s;
+  }
+
+  /* =======CARDS===== */
+  .container_card_home {
+    width: 100%;
+    padding: 3vw;
+    height: auto;
+  }
+
+  .card {
+    width: 90vw;
+    height: 35vh;
+    padding: 40px;
+    margin-left: 15px;
+    border-radius: 20px;
+  }
+
+  .card_saldo {
+    background: url(../../assets/fondo.avif);
+  }
+
+  .mi_saldo {
+    font-size: 13.0236em;
+    line-height: 16px;
+    margin-left: 20px;
+    display: flex;
+  }
+
+  .titular_vencimiento {
+    display: flex;
+  }
+
+  .card_ingresos {
+    display: flex;
+    background: url(../../assets/55708631.png);
+    background-position: 20%;
+  }
+
+  .card_egresos {
+    background: url(../../assets/55708631.png);
+    background-position: 20%;
+  }
+
+  .circle {
+    width: 60px;
+    height: 60px;
+    background-color: #efefef;
+    border-radius: 70%;
+    display: flex;
+    align-items: center;
+  }
+
+  /* =======ENDSCARDS======= */
+  /* ========================== */
+  /* ========================== */
+  /* ========================== */
+  /* ========================== */
+  /* ========================== */
+  /* =======BALANCE Y TRANSACTION======= */
+  .container_balance {
+    width: 90vw;
+    border-radius: 30px;
+    margin-bottom: 10px;
+  }
+
+  .container_transacciones {
+    width: 90vw;
+    height: 40vh;
+    border-radius: 30px;
+  }
+
+  .container_prestamos {
+    width: auto;
+    height: auto;
+    padding: 1vw;
+    border-radius: 30px;
+    display: flex;
+  }
+
+  .container_prestamos table {
+    border-radius: 5px;
+  }
+}

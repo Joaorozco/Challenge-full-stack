@@ -1,17 +1,19 @@
-.section-inicio{
+.section-inicio {
   width: 100%;
   display: flex;
 
   background: url(../../assets/55708631.png);
 }
-.section-title{
+
+.section-title {
   width: 55%;
   height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
 }
-.title{
+
+.title {
   width: auto;
   height: 60px;
 
@@ -21,42 +23,49 @@
 
   color: #4B4B4B;
 }
-.palabra-destacada{
+
+.palabra-destacada {
   color: #252F69;
 }
-.section-login{
+
+.section-login {
   width: 45%;
-  height: 100%;
   display: flex;
   justify-content: center;
   background: rgba(51, 66, 138, 0.822);
 }
-.container-login{
+
+.container-login {
   width: 65%;
   height: auto;
 }
-.form_title{
+
+.form_title {
   margin-top: .8em;
   font-weight: 700;
   font-size: 32px;
   line-height: 48px;
   color: #f8f8f8;
 }
-.form_container{
+
+.form_container {
   margin-top: 5em;
   display: grid;
   gap: 2.5em;
 }
-.form_group{
+
+.form_group {
   position: relative;
 }
-.form_label{
+
+.form_label {
   color: #ffff;
   font-weight: 500;
   font-size: 20px;
   line-height: 30px;
 }
-.form_input{
+
+.form_input {
   width: 100%;
   background: none;
   color: #ffff;
@@ -66,12 +75,14 @@
   outline: none;
   border-bottom: 1px solid #ffff;
 }
-.text-danger{
+
+.text-danger {
   display: block;
   color: rgb(219, 4, 4);
   font-size: 12px;
 }
-.form_submit{
+
+.form_submit {
   width: 100%;
   height: 42px;
   margin-top: 2em;
@@ -85,45 +96,184 @@
   color: #252F69;
   cursor: pointer;
 }
-.form_submit:hover{
+
+.form_submit:hover {
   transition: all .5s;
   font-size: 17px;
 }
+
 ::placeholder {
-  color:#CACACA;
+  color: #CACACA;
 }
-.teclado_virtual{
+
+.teclado_virtual {
   display: flex;
   justify-content: center;
   align-items: center;
   cursor: pointer;
   margin-top: 1.3em;
 }
-.vector_teclado_virtual{
+
+.vector_teclado_virtual {
   width: 22px;
   height: 17px;
   color: #FFFFFF;
 }
-.texto_teclado_virtual{
+
+.texto_teclado_virtual {
   margin-left: 1em;
   font-size: 14px;
   line-height: 24px;
   color: #CACACA;
 }
-.texto_teclado_virtual:hover{
+
+.texto_teclado_virtual:hover {
   color: #cacaca9c;
 }
-.register{
+
+.register {
   display: flex;
   justify-content: center;
   font-size: 12px;
   line-height: 24px;
   margin-top: 1em;
 }
-.link_register{
+
+.link_register {
   text-decoration: none;
   color: #CACACA;
 }
-.link_register:hover{
+
+.link_register:hover {
   color: #cacacab4;
+}
+
+/* Para dispositivos móviles con una pantalla de hasta 768px de ancho */
+@media only screen and (max-width: 768px) {
+  .section-inicio {
+    width: 100%;
+    display: block;
+    background: url(../../assets/55708631.png);
+  }
+
+  .section-title {
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+  }
+
+  .title {
+    width: auto;
+    height: 60px;
+
+    font-weight: 600;
+    font-size: 35px;
+    line-height: 60px;
+
+    color: #4B4B4B;
+  }
+
+  .section-login {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    background-color: transparent;
+  }
+
+  .container-login {
+    width: 65%;
+    height: auto;
+    padding: 3em;
+    border-radius: 30px;
+    background: rgba(51, 66, 138, 0.822);
+  }
+
+  .form_title {
+    margin-top: .8em;
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 48px;
+    color: #f8f8f8;
+  }
+
+  .form_container {
+    margin-top: 5em;
+    display: grid;
+    gap: 2.5em;
+  }
+
+  .form_group {
+    position: relative;
+  }
+
+  .form_label {
+    color: #ffff;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 30px;
+  }
+
+  .form_input {
+    width: 100%;
+    background: none;
+    color: #ffff;
+    font-size: 1rem;
+    padding: .6em .3em;
+    border: none;
+    outline: none;
+    border-bottom: 1px solid #ffff;
+  }
+
+  .text-danger {
+    display: block;
+    color: rgb(219, 4, 4);
+    font-size: 12px;
+  }
+
+  .form_submit {
+    width: 100%;
+    height: 42px;
+    margin-top: 2em;
+    background: #FFFFFF;
+    border-radius: 20px;
+
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 27px;
+    border: none;
+    color: #252F69;
+    cursor: pointer;
+  }
+
+  .teclado_virtual {
+    margin-top: 2em;
+  }
+
+  .texto_teclado_virtual {
+    margin-top: 1.5em;
+    color: #CACACA;
+  }
+
+  .texto_teclado_virtual:hover {
+    color: #cacaca9c;
+  }
+
+  .register {
+    margin-top: 2em;
+  }
+
+  .link_register {
+    text-decoration: none;
+    color: #CACACA;
+  }
+
+  .link_register:hover {
+    color: #cacacab4;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  /* Agrega aquí las reglas de estilo para la versión móvil de tu sitio web */
 }

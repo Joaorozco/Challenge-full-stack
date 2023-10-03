@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { DataServiceService } from '../service/data-service.service';
 
 @Component({
   selector: 'app-home',
@@ -6,10 +7,14 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent implements OnInit {
-  view: [number, number] = [500, 200];
+  view: [number, number] = [400, 200];
   colorScheme = {
     domain: ['#5AA454', '#A10A28', '#C7B42C', '#AAAAAA']
   };
+
+  single: any;
+  allTransaction: any;
+  allCards: any;
 
   // options
   showXAxis = true;
@@ -17,35 +22,36 @@ export class HomeComponent implements OnInit {
   gradient = false;
   showLegend = false;
   showXAxisLabel = false;
-  xAxisLabel = 'Country';
+  xAxisLabel = 'dia';
   showYAxisLabel = false;
-  yAxisLabel = 'Population';
+  yAxisLabel = 'monto';
 
 
-  single = [
-    {
-      "name": "Germany",
-      "value": 10.000
-    },
-    {
-      "name": "USA",
-      "value": 5000
-    },
-    {
-      "name": "France",
-      "value": 720
-    }
-  ];
 
-  constructor() {
+  constructor(private service: DataServiceService) {
 
+  }
+
+
+  ngOnInit(): void {
+    this.service.allBalance().subscribe(data => {
+      this.single = data
+    })
+
+    this.service.allTransaction().subscribe(data => {
+      this.allTransaction = data;
+    })
+
+    this.service.allCards().subscribe(data => {
+      this.allCards = data;
+    })
   }
 
   onSelect(event: any) {
     console.log(event);
   }
 
-  ngOnInit(): void {
-  }
+
+
 
 }
